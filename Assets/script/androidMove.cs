@@ -54,7 +54,7 @@ public class androidMove : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.name == "floor(Clone)" || col.gameObject.name == "keg(Clone)")
+        if (col.gameObject.name == "floor(Clone)" || col.gameObject.name == "keg(Clone)" || col.gameObject.name == "floor2(Clone)")
         {
             // grounded = true;
             jumpCount = 0;

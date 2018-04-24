@@ -40,7 +40,7 @@ public class flooring : MonoBehaviour {
         //Debug.Log(dist);
         if (dist < 50)
         {
-            if (coincounter.count < 10)
+            if (coincounter.count < 5)
             {
                 for (int i = 0; i < 50; i++)
                 {
@@ -74,7 +74,7 @@ public class flooring : MonoBehaviour {
 
             //Destroy(mySprite, lifetime);
         }
-        if (coincounter.count >= 20 && beerbool == true)
+        if (coincounter.count >= 10 && beerbool == true)
         {
             currentposition1 = currentPosition;
             currentposition1 += new Vector3(1f, 5f, 0f);
