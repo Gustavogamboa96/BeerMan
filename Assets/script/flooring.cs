@@ -12,10 +12,11 @@ public class flooring : MonoBehaviour {
     public GameObject tmpObj1, tmpObj, tmpBeer; 
    // public GameObject[] arr;
     public Renderer myrend;
-    public bool beerbool = true;
+    public bool beerbool;
 
     // Use this for initialization
     void Start () {
+        beerbool = true;
         //floors = new GameObject[200];
         //this.GetComponent<SpriteRenderer>().sprite = mySprite;
         currentPosition = mySprite.transform.position;
@@ -40,7 +41,7 @@ public class flooring : MonoBehaviour {
         //Debug.Log(dist);
         if (dist < 50)
         {
-            if (coincounter.count < 5)
+            if (coincounter.coinbar.value < 5f)
             {
                 for (int i = 0; i < 50; i++)
                 {
@@ -74,7 +75,7 @@ public class flooring : MonoBehaviour {
 
             //Destroy(mySprite, lifetime);
         }
-        if (coincounter.count >= 10 && beerbool == true)
+        if (coincounter.coinbar.value >= 10 && beerbool == true)
         {
             currentposition1 = currentPosition;
             currentposition1 += new Vector3(1f, 5f, 0f);

@@ -10,6 +10,7 @@ public class Simplecoin : MonoBehaviour
     // public AudioSource audioSource;
     ///GameObject sound;
     public coincounter coincounter;
+    
     Text score;
 
     private void Start()
@@ -30,9 +31,9 @@ public class Simplecoin : MonoBehaviour
         //audioSource.Play();
         if (player.gameObject.name == "1")
         {
-            coincounter.count += 1;
+            coincounter.coinbar.value += 1f;
             //print(coincounter.count);
-            score.text = "x" + coincounter.count;
+            score.text = "x" + coincounter.coinbar.value;
             // audioSource.Play();
             //Destroy(gameObject);
             gameObject.SetActive(false);    

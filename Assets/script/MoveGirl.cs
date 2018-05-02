@@ -8,12 +8,13 @@ public class MoveGirl : MonoBehaviour
    public float t, dist;
     public Vector3 startPosition;
     public Vector3 target, tmp, pos;
+    public coincounter coincounter;
     
     
     public float timeToReachTarget;
     void Start()
     {
-        
+        coincounter = GameObject.Find("Counter").GetComponent<coincounter>();
         pos = player.transform.position;
         tmp.Set(-4, -0.68f, 0);
         startPosition = target = transform.position;
@@ -28,8 +29,11 @@ public class MoveGirl : MonoBehaviour
         if (transform.position.x < (player.transform.position.x)-5)
         {
             //startPosition.Set(transform.position.x, -0.6855116f,0);
-            SetDestination(((player.transform.position.x) +4.5f), Random.Range(0.5f, 1.4f));
-            
+            if(coincounter.coinbar.value<5)
+                SetDestination(((player.transform.position.x) +4.5f), Random.Range(1.2f, 1.4f));
+            else
+                SetDestination(((player.transform.position.x) + 4.5f), Random.Range(0.5f, 1.0f));
+
             //dist = Vector3.Distance(startPosition, pos);
         }
        // print(dist);

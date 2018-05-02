@@ -27,7 +27,7 @@ public class Spawn : MonoBehaviour {
         int spawned = 0;
         while (spawned < numToSpawn)
         {
-            Vector3 position = new Vector3(Random.Range(12.0F, ((player.transform.position.x) + 60f)), 17, 1);
+            Vector3 position = new Vector3(Random.Range(player.transform.position.x, ((player.transform.position.x) + 60f)), 17, 1);
             spawned++;
             Instantiate(kegs, position, Quaternion.identity);
         }

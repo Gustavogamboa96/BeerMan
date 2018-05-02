@@ -32,7 +32,7 @@ public class SpawnCaps : MonoBehaviour
         int spawned = 0;
         while (spawned < numToSpawn)
         {
-            Vector3 position = new Vector3(Random.Range(12.0F, ((player.transform.position.x) + 25f)), Random.Range(6.6f, 1.2f), 1);
+            Vector3 position = new Vector3(Random.Range(player.transform.position.x + 25f, ((player.transform.position.x) + 50f)), Random.Range(6.6f, 1.2f), 1);
             spawned++;
             Instantiate(kegs, position, Quaternion.identity);
             if (!cap.activeSelf)
